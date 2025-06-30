@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Net Prime - Serviços Digitais</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+  /* Reset box-sizing para facilitar cálculos */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    background-color: #1a1a1a;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .topbar a {
+    color: #00ffc8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin: 20px 0 10px;
+  }
+
+  .slogan {
+    text-align: center;
+    font-size: 16px;
+    color: #facc15;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    background-color: #000;
+    font-weight: bold;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .menu a:hover {
+    color: #facc15;
+  }
+
+  .promo {
+    text-align: center;
+    background: #ff6600;
+    padding: 6px 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .whatsapp-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .whatsapp-btn img {
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    transition: transform 0.2s;
+    width: 260px;
+    flex-shrink: 0;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    background: #fff;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .descricao {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .preco {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #888;
+  }
+
+  .desconto {
+    background-color: #00ff88;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .preco-final {
+    color: #00ffc8;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .btn {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    display: block;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    background: #000;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  /* Mobile: 2 cards lado a lado */
+  @media (max-width: 600px) {
+    .card {
+      width: 48% !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- BOTÃO WHATSAPP FIXO -->
+<a class="whatsapp-btn" href="https://wa.me/5598984226733" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  WhatsApp
+</a>
+
+<div class="topbar">
+  Contato: <a href="https://wa.me/5598984226733">(98) 98422-6733</a>
+</div>
+
+<div class="logo">
+  <img src="https://i.ibb.co/tpzBq2sF/3d.jpg" alt="Logo Esquerda" style="height: 90px; vertical-align: middle; margin-right: 50px;">
+  NET PRIME
+  <img src="https://i.pinimg.com/1200x/41/a5/9d/41a59d8e39808682608a2b09fc600931.jpg" alt="Logo Direita" style="height: 70px; vertical-align: middle; margin-left: 10px;">
+</div>
+
+<div class="slogan">Qualidade e economia em um só lugar...</div>
+<div class="slogan">NG</div>
+
+<div class="menu">
+  <a href="#home">tela inicial</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<div class="promo">🎉 Promoções 65% OFF em vários produtos digitais! 🎉</div>
+
+<div class="promo"> MEGA PREÇO BAIXO</div
+
+<div class="container" id="produtos">
+  <div class="row">
+
+    <div class="card">
+      <img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5.png" alt="Netflix" />
+      <div class="card-content">
+        <div class="card-title">Netflix (Tela)</div>
+        <div class="descricao">Acesso garantido por 30 dias em HD.</div>
+        <div><span class="preco">R$ 19,90</span><span class="desconto">-28%</span></div>
+        <div class="preco-final">R$ 16,83</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+Netflix+1+Tela">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://seeklogo.com/images/O/openai-chatgpt-logo-8B9BFEDC26-seeklogo.com.png" alt="ChatGPT" />
+      <div class="card-content">
+        <div class="card-title">ChatGPT Plus</div>
+        <div class="descricao">Acesso à versão GPT-4 por 30 dias.</div>
+        <div><span class="preco">R$ 15,90</span><span class="desconto">-23%</span></div>
+        <div class="preco-final">R$ 10,90</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+ChatGPT+Plus">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/YouTube_Premium_logo.svg/2560px-YouTube_Premium_logo.svg.png" alt="YouTube" />
+      <div class="card-content">
+        <div class="card-title">YouTube Premium</div>
+        <div class="descricao">Sem anúncios + YouTube Music por 30 dias.</div>
+        <div><span class="preco">R$ 6,00</span><span class="desconto">-45%</span></div>
+        <div class="preco-final">R$ 4,50</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+YouTube+Premium">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Prime_Video_logo_%282024%29.svg/2560px-Prime_Video_logo_%282024%29.svg.png"" alt="Prime Video" />
+      <div class="card-content">
+        <div class="card-title">Prime Video (tela)</div>
+        <div class="descricao">Streaming da Amazon válido por 30 dias.</div>
+        <div><span class="preco">R$ 7,90</span><span class="desconto">-25%</span></div>
+        <div class="preco-final">R$ 5,90</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+Prime+Video">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://static.wikia.nocookie.net/logopedia/images/e/e1/Spotify_Premium_%28Stacked%29.svg/revision/latest?cb=20221223124052" alt="Spotify" />
+      <div class="card-content">
+        <div class="card-title">Spotify Premium</div>
+        <div class="descricao">Acesso ilimitado a músicas sem anúncios.</div>
+        <div><span class="preco">R$ 8,90</span><span class="desconto">-30%</span></div>
+        <div class="preco-final">R$ 5,10</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+Spotify+Premium">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://ovicio.com.br/wp-content/uploads/2022/08/20220823-share-default-d72cf588f6d06cba22171f5ae44289d3.png" alt="Star+" />
+      <div class="card-content">
+        <div class="card-title">Star+ esgotado</div>
+        <div class="descricao">Conteúdos exclusivos da Star+ por 30 dias.</div>
+        <div><span class="preco">R$ 6,50</span><span class="desconto">-27%</span></div>
+        <div class="preco-final">R$ 4,70</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+Star+Plus">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/01/max-novo-streaming.png" alt="HBO Max" />
+      <div class="card-content">
+        <div class="card-title">HBO Max</div>
+        <div class="descricao">Streaming HBO com séries e filmes populares.</div>
+        <div><span class="preco">R$ 8,90</span><span class="desconto">-20%</span></div>
+        <div class="preco-final">R$ 7,10</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+HBO+Max">Comprar Agora</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/08/31/1598889398345.jpg" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">Globo Play+canais</div>
+        <div class="descricao">Acesso ao conteúdo da Globo por 30 dias.</div>
+        <div><span class="preco">R$ 10,50</span><span class="desconto">-22%</span></div>
+        <div class="preco-final">R$ 7,50</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+globo+canais">Comprar Agora</a>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="https://cdn.prod.website-files.com/624dc1cbadac2d2913de3d2d/6266d68947ca71a8f91c6d82_Canva_Logo_grande.png" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">Canva pro</div>
+        <div class="descricao">Acesso mensal.</div>
+        <div><span class="preco">R$ 10,50</span><span class="desconto">-22%</span></div>
+        <div class="preco-final">R$ 7,50</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+canva+pro">Comprar Agora</a>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Rakuten_Viki_logo.svg/2560px-Rakuten_Viki_logo.svg.png" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">viki Rakutem doramas (tela)</div>
+        <div class="descricao">Acesso mensal, ou 7dias.</div>
+        <div><span class="preco">R$ 10,50</span><span class="desconto">-22%</span></div>
+        <div class="preco-final">R$ 7,50</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+viki+rakuten">Comprar Agora</a>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="https://crunchyroll.com/about/default-banner.jpg" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">Chunchyrrol premium tela</div>
+        <div class="descricao">Acesso 30 dias.</div>
+        <div><span class="preco">R$ 9</span><span class="desconto">-22%</span></div>
+        <div class="preco-final">R$ 6,50</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+chunchyrrol">Comprar Agora</a>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="https://dcdn-us.mitiendanube.com/stores/003/428/090/products/imagem-do-whatsapp-de-2023-07-10-a-s-22-12-361-c0f13308e451d7060a16890381152913-1024-1024.jpg" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">liberaçâo de canais de tv</div>
+        <div class="descricao">Assista a mais de 10 mil canais, incluindo abertos, fechados, esportes, filmes, séries</div>
+        <div><span class="preco">R$ 30</span><span class="desconto">-22%</span></div>
+        <div class="preco-final">R$ 24,99</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+canais+de+tv">Comprar Agora</a>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="https://as1.ftcdn.net/jpg/02/45/97/82/1000_F_245978247_ZkBKjtMDIfKArEvL8110tUVzMzUDIWxh.jpg" alt="Globo Play" />
+      <div class="card-content">
+        <div class="card-title">teste de canais gratis</div>
+        <div class="descricao">faça um teste gratis de 6 horas</div>
+        <div><span class="preco">R$ 00</span><span class="desconto">-100%</span></div>
+        <div class="preco-final">R$ 00,00</div>
+        <a class="btn" href="https://wa.me/5598984226733?text=Quero+fazer+o+teste+dos+canais">testar grátis</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer id="contato">
+  © 2025 Net Prime - Todos os direitos reservados.
+</footer>
+
+<!-- EFEITO DE NEVE -->
+<script>
+  const snowflakes = [];
+  for (let i = 0; i < 60; i++) {
+    const flake = document.createElement('div');
+    flake.innerHTML = '❄';
+    flake.style.position = 'fixed';
+    flake.style.top = Math.random() * window.innerHeight + 'px';
+    flake.style.left = Math.random() * window.innerWidth + 'px';
+    flake.style.fontSize = (Math.random() * 12 + 8) + 'px';
+    flake.style.color = '#fff';
+    flake.style.zIndex = 9999;
+    flake.style.opacity = 0.95;
+    document.body.appendChild(flake);
+    snowflakes.push({ el: flake, speed: Math.random() * 1.3 + 0.6 });
+  }
+
+  function animateSnow() {
+    snowflakes.forEach(snow => {
+      let top = parseFloat(snow.el.style.top);
+      top += snow.speed;
+      if (top > window.innerHeight) top = -20;
+      snow.el.style.top = top + 'px';
+    });
+    requestAnimationFrame(animateSnow);
+  }
+
+  animateSnow();
+</script>
+
+</body>
+</html>
